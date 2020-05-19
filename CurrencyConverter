@@ -1,0 +1,43 @@
+import UIKit
+
+//Create a currency type enum below the import statements.
+
+enum Currency {
+    case cad
+    case mxn
+}
+
+//2.
+let usToCad = 1.39
+let usToMxn = 23.75
+
+//3.
+var currency: currency = .mxn
+var currency: currency = .cad
+
+//4.
+func convert(_dollars: Double) -> Double {
+  var cvtValue: Double = 1.0
+  switch currency {
+    case.cad: cvtValue = dollars * usToCad
+    case.mxn: cvtValue = dollars * usToMxn
+  }
+    return cvtValue  // 5.
+}   
+ 
+ // 6.
+ func convert(amountString: String) -> String? {
+   guard let amount = Double(amountString?) else {return nil} 
+
+let usCurrency = convert(amount)
+
+return String(usCurrency)
+}
+
+
+// 7.
+currency = .cad
+convert(amountString: "21"
+
+currency = .mxn
+convert(amountString: "71"
